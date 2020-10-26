@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Node25",
+"language": "GDScript",
+"path": "res://addons/node25/node_25.gd"
+} ]
+_global_script_class_icons={
+"Node25": "res://addons/node25/icons/node_25.png"
+}
+
+[application]
+
+config/name="Ex 2.5D"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "node25" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
