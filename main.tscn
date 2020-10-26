@@ -4,5 +4,5 @@
 
 [node name="Node" type="Node"]
 
-[node name="Node25" type="Node2D" parent="."]
+[node name="stadium" type="Node2D" parent="."]
 script = ExtResource( 1 )

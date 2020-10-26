@@ -40,8 +40,10 @@ func set_spatial_type(value):
   spatial_type = value
   if spatial_node:
     if get_type(spatial_node.get_class()) != spatial_type:
-      remove_child(spatial_node)
+      if spatial_node.get_parent() == self:
+        remove_child(spatial_node)
       spatial_node.free()
+      update_configuration_warning()
     else:
       return
 
@@ -67,7 +69,7 @@ func set_spatial_type(value):
 func remove_child(node):
   .remove_child(node)
   if node == spatial_node:
-    update_configuration_warning()
+    set_spatial_type(BodyType.Empty)
 
 func get_type(cls):
   var type = null
