@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/node25/node_25.gd" type="Script" id=1]
+[ext_resource path="res://assets/stadiums/grass_ground.png" type="Texture" id=2]
 
 [node name="Node" type="Node"]
 
-[node name="stadium" type="Node2D" parent="."]
+[node name="Node25" type="Node2D" parent="."]
 script = ExtResource( 1 )
+sprite_size = Vector2( 848, 318 )
+spatial_type = 1
+sprite_type = 1
+
+[node name="sprite" type="Sprite" parent="Node25"]
+texture = ExtResource( 2 )
+
+[node name="math" type="StaticBody" parent="Node25"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Node25/math"]
